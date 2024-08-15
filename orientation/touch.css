@@ -1,0 +1,196 @@
+/* Genel stil ayarları */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+/* İletişim kutusu container */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* İletişim formu stil ayarları */
+.contact-form {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.contact-form h2 {
+    margin: 0 0 20px;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+.contact-form button:active {
+    background-color: #004080;
+}
+
+/* Açıklama metni stil ayarları */
+.contact-info {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+}
+
+/* Navbar stil ayarları */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-sizing: border-box; /* Padding ve border'ları içerik genişliğine dahil et */
+}
+
+/* Menü Toggle (Mobil) */
+.menu-toggle {
+    display: none; /* Menü toggle'ını varsayılan olarak gizle */
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Navbar Logo */
+.nav-logo {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0; /* Marginleri sıfırla */
+}
+
+/* Navbar Linkleri */
+.nav-links {
+    display: flex;
+    gap: 20px; /* Linkler arasına boşluk bırak */
+    margin: 0; /* Marginleri sıfırla */
+    padding: 0; /* Paddingleri sıfırla */
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #575757;
+    color: #fff;
+}
+
+/* Menü Toggle için Medya Sorgusu */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Mobilde linkleri gizle */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Navbar yüksekliği kadar yukarıdan başla */
+        right: 0;
+        background-color: #333;
+        width: 100%;
+        gap: 0;
+        box-sizing: border-box; /* Padding ve border'ları içerik genişliğine dahil et */
+    }
+
+    .nav-links.show {
+        display: flex; /* Menü toggle ile açıldığında göster */
+    }
+
+    .nav-links a {
+        padding: 15px;
+        border-bottom: 1px solid #575757;
+    }
+
+    .menu-toggle {
+        display: block; /* Menü toggle'ını mobilde göster */
+    }
+}
+
+
+/* Tablet ve Mobil için ek medya sorguları */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 15px 30px; /* Tablet ekranlarında biraz daha genişlik sağla */
+    }
+
+    .nav-links a {
+        font-size: 14px; /* Tabletlerde font boyutunu küçült */
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 20px; /* Mobil ekranlarda paddingi ayarla */
+    }
+
+    .nav-logo {
+        font-size: 16px; /* Mobilde logo boyutunu küçült */
+    }
+}
+
+/* Başarı mesajı için stil */
+.success-message {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    z-index: 1001; /* Üstte görünmesini sağlamak için */
+}

@@ -1,0 +1,299 @@
+/* Genel stil ayarları */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+/* Navbar stil ayarları */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-sizing: border-box; /* Padding ve border'ları içerik genişliğine dahil et */
+}
+
+/* Menü Toggle (Mobil) */
+.menu-toggle {
+    display: none; /* Menü toggle'ını varsayılan olarak gizle */
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Navbar Logo */
+.nav-logo {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0; /* Marginleri sıfırla */
+    order: 1; /* Logo'yu mobilde en sola al */
+}
+
+/* Navbar Linkleri */
+.nav-links {
+    display: flex;
+    gap: 20px; /* Linkler arasına boşluk bırak */
+    margin: 0; /* Marginleri sıfırla */
+    padding: 0; /* Paddingleri sıfırla */
+    order: 2; /* Linkleri logo'dan sonra göster */
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #575757;
+    color: #fff;
+}
+
+/* Menü Toggle için Medya Sorgusu */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Menü toggle ile açıldığında göster */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Navbar yüksekliği kadar yukarıdan başla */
+        right: 0;
+        background-color: #333;
+        width: 100%;
+        gap: 0;
+        box-sizing: border-box; /* Padding ve border'ları içerik genişliğine dahil et */
+    }
+
+    .nav-links.show {
+        display: flex; /* Menü toggle ile açıldığında göster */
+    }
+
+    .nav-links a {
+        padding: 15px;
+        border-bottom: 1px solid #575757;
+    }
+
+    .menu-toggle {
+        display: block; /* Menü toggle'ını mobilde göster */
+    }
+}
+
+/* Tablet ve Mobil için ek medya sorguları */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 15px 30px; /* Tablet ekranlarında biraz daha genişlik sağla */
+    }
+
+    .nav-links a {
+        font-size: 14px; /* Tabletlerde font boyutunu küçült */
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 20px; /* Mobil ekranlarda paddingi ayarla */
+    }
+
+    .nav-logo {
+        font-size: 16px; /* Mobilde logo boyutunu küçült */
+    }
+}
+
+/* İçerik Alanı */
+main {
+    padding: 20px;
+    background-color: #fff;
+    max-width: 900px;
+    margin: 20px auto; /* İçeriği ortala ve üst boşluk ekle */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Ana içeriğin flex elemanı olması sağlanır */
+}
+
+/* Hakkımızda Başlığı */
+#hakkımızda {
+    margin-top: 80px; /* Navbar ile başlık arasında boşluk oluştur */
+}
+
+#hakkımızda h2 {
+    text-align: center;
+    color: #333;
+}
+
+.content {
+    margin-top: 20px;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section h3 {
+    color: #555;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+}
+
+.section p {
+    line-height: 1.6;
+    color: #666;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.info-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.info-box {
+    flex: 1 1 22%;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.info-box h4 {
+    margin-top: 0;
+    color: #333;
+}
+
+.info-box p {
+    margin: 0;
+    color: #666;
+}
+
+/* Footer Stil */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    width: 100%;
+    position: relative; /* Footer içeriğe göre konumlanır */
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box; /* Padding ve border'ları içerik genişliğine dahil et */
+}
+
+/* Footer İçeriği */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.footer-left, .footer-middle, .footer-right {
+    margin: 0;
+    padding: 0;
+}
+
+.footer-left {
+    flex: 1;
+    text-align: left;
+}
+
+.footer-middle {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-right {
+    flex: 1;
+    text-align: right;
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.social-media {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+}
+
+.social-icon {
+    margin: 0 5px;
+    color: #fff;
+    font-size: 35px;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #ddd;
+}
+
+/* Footer için Medya Sorguları */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-left {
+        order: 3;
+        text-align: center;
+    }
+
+    .footer-middle {
+        order: 1;
+        margin-bottom: 10px;
+    }
+
+    .footer-right {
+        order: 2;
+    }
+
+    .social-media {
+        justify-content: center;
+        margin: 5px 0;
+    }
+
+    .social-icon {
+        font-size: 24px;
+        margin: 0 10px;
+    }
+}
+
+
+/* Butonun başlangıç stili */
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  /* Butonun üzerine gelindiğinde uygulanacak stil */
+  .btn:hover {
+    background-color: #45a049; /* Renk değişimi */
+    transform: scale(1.1); /* Butonun büyümesi */
+    cursor: pointer; /* El şeklinde imleç */
+  }
+  

@@ -1,0 +1,280 @@
+/* Genel Stil Ayarları */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+/* Navbar stil */
+nav {
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+/* Menü Toggle (Mobil) */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Navbar Logo */
+.nav-logo {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Navbar Linkleri */
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #575757;
+    color: #fff;
+}
+
+/* Menü Toggle için Medya Sorgusu */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+        width: 100%;
+        gap: 0;
+        box-sizing: border-box;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 15px;
+        border-bottom: 1px solid #575757;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Tablet ve Mobil için ek medya sorguları */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 15px 30px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 20px;
+    }
+
+    .nav-logo {
+        font-size: 16px;
+    }
+}
+
+/* İçerik */
+#menu {
+    text-align: center;
+}
+
+#game, #gift {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+#flag {
+    width: 300px;
+    height: 200px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    object-fit: contain;
+}
+
+#options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+#score {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#timer {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #d9534f;
+}
+
+/* Animasyonlu geçiş için CSS */
+.fade-out {
+    animation: fadeOut 1s forwards;
+}
+
+.fade-in {
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Footer stil */
+/* footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.footer-left, .footer-middle, .footer-right {
+    margin: 0;
+    padding: 0;
+}
+
+.footer-left {
+    flex: 1;
+    text-align: left;
+}
+
+.footer-middle {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-right {
+    flex: 1;
+    text-align: right;
+    margin-right: 20px;
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.social-media {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+}
+
+.social-icon {
+    margin: 0 5px;
+    color: #fff;
+    font-size: 35px;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #ddd;
+}
+
+@media (max-width: 600px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 5px;
+    }
+
+    .footer-left {
+        order: 3;
+        text-align: center;
+    }
+
+    .footer-middle {
+        order: 1;
+        margin-bottom: 10px;
+    }
+
+    .footer-right {
+        order: 2;
+    }
+
+    .social-media {
+        justify-content: center;
+        margin: 5px 0;
+    }
+
+    .social-icon {
+        font-size: 24px;
+        margin: 0 10px;
+    }
+} */

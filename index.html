@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBoga</title>
+    <link rel="icon" href="./img/aa.png" type="image/x-icon"> <!-- Favicon -->
+    <link rel="stylesheet" href="./stayles/styles.css">
+    
+
+</head>
+<body>
+  <!--Navbar start-->
+<nav>
+    <div class="navbar">
+        <div class="menu-toggle" id="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-logo">BBoğa</div>
+        <div class="nav-links">
+            <a href="index.html">Ana Sayfa</a>
+            <a href="./orientation/channel.html">İletişim</a>
+            <a href="./About/about.html">Hakkımızda</a>
+        </div>
+    </div>
+</nav>
+<!--Navbar End-->
+
+
+
+    <!-- İçerik -->
+    <div id="menu">
+        <h1>Bayrak Tahmin Oyunu</h1>
+        <button onclick="selectDifficulty()">Oyun Başlat</button>
+    </div>
+    <div id="difficulty-selection" style="display: none;">
+        <button onclick="startGame('easy')">Kolay</button>
+        <button onclick="startGame('medium')">Orta</button>
+        <button onclick="startGame('hard')">Zor</button>
+    </div>
+    <div id="game" style="display: none;">
+        <img id="flag" src="" alt="Bayrak">
+        <div id="options"></div>
+        <p id="message"></p>
+        <p id="timer">Süre: 10</p>
+        <p id="score">Puan: 0</p>
+        <!-- Sonraki Bayrak butonu kaldırıldı -->
+    </div>
+    <div id="gift" style="display: none;">
+        <h2>Hediye Kutusu</h2>
+        <button onclick="chooseColor('red')">Kırmızı</button>
+        <button onclick="chooseColor('green')">Yeşil</button>
+        <button onclick="chooseColor('blue')">Mavi</button>
+    </div>
+
+
+
+
+
+    
+
+    <!--Fooer
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <p>&copy; 2024 Bayrak Tahmin Oyunu - Tüm hakları saklıdır.<br>
+                    Oyun Kurucusu: Ali Başboğa
+                </p>
+            </div>
+            <div class="footer-middle">
+                <p>
+                    Github: 
+                    <a href="https://github.com/AliBasboga" target="_blank" class="social-icon">
+                        <i class="fab fa-github"></i> Github
+                    </a>
+                </p>
+            </div>
+            <div class="footer-right">
+                <div class="social-media">
+                    <a href="https://www.instagram.com/ali45_xp/" class="social-icon" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="mailto:alibasboga885@gmail.com" class="social-icon" target="_blank">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ali-basboga-200856318/" class="social-icon" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+-->
+    
+    
+    <!--Link-->
+    <script src="./stayles/script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</body>
+</html>
